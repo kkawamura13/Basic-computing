@@ -1,0 +1,448 @@
+{
+ "metadata": {
+  "name": "",
+  "signature": "sha256:dc5ec79278def4e7d8bea391c843b1eeb63bba49f8b001d6b3d6f87e25b04c2d"
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "# Python lists and strings\n",
+      "\n",
+      "In this notebook, we will explore several basic types of Python data structures: numerical variables, lists and strings. We will learn what they are some basic built-in manipulation methods for each type."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "6*4"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 3,
+       "text": [
+        "24"
+       ]
+      }
+     ],
+     "prompt_number": 3
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "This is an example of a simple operation in python. Its result is printed below."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "a = 6\n",
+      "b = 4\n",
+      "a * b"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 2,
+       "text": [
+        "24"
+       ]
+      }
+     ],
+     "prompt_number": 2
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We just initialized two *variables* and multiplied them. The result of the operation is the same as above, but using information that is now stored in the computer's memory."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print a,b\n",
+      "a-b"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "ename": "NameError",
+       "evalue": "name 'a' is not defined",
+       "output_type": "pyerr",
+       "traceback": [
+        "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m\n\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+        "\u001b[1;32m<ipython-input-1-8ce5c4e070c8>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[1;32mprint\u001b[0m \u001b[0ma\u001b[0m\u001b[1;33m,\u001b[0m\u001b[0mb\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      2\u001b[0m \u001b[0ma\u001b[0m\u001b[1;33m-\u001b[0m\u001b[0mb\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+        "\u001b[1;31mNameError\u001b[0m: name 'a' is not defined"
+       ]
+      }
+     ],
+     "prompt_number": 1
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can print the contents of the variables, and also perform other types of manipulations."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "myString = \"A quick brown fox jumps over the lazy dog\"\n",
+      "print myString"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "A quick brown fox jumps over the lazy dog\n"
+       ]
+      }
+     ],
+     "prompt_number": 7
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We've just created a *string* variable type. Note, you could have also used single quotes in this context. \n",
+      "\n",
+      "Just as there are methods to manipulate integers, Python also has methods that are specific for string variables. \n",
+      "\n",
+      "Later on we'll even see an extended set of these methods for biological string, such as DNA and RNA sequences."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print myString.upper()\n",
+      "print myString.find(\"fox\")\n",
+      "print myString.replace(\"fox\",\"CAT\")"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "A QUICK BROWN FOX JUMPS OVER THE LAZY DOG\n",
+        "14\n",
+        "A quick brown CAT jumps over the lazy dog\n"
+       ]
+      }
+     ],
+     "prompt_number": 17
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Methods are generally specific to particular variable types. E.g., you can't multiply strings, and you can't change the case of numbers. You may want to find out what methods are associated with a particular data structure. Python has a command to do this:"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": true,
+     "input": [
+      "dir(myString)"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "ename": "NameError",
+       "evalue": "name 'myString' is not defined",
+       "output_type": "pyerr",
+       "traceback": [
+        "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m\n\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+        "\u001b[1;32m<ipython-input-4-e373feb26f11>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[1;32m----> 1\u001b[1;33m \u001b[0mdir\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mmyString\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m",
+        "\u001b[1;31mNameError\u001b[0m: name 'myString' is not defined"
+       ]
+      }
+     ],
+     "prompt_number": 4
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "If you have no idea what the various methods do, you can alawys as Python for help. In IPython you can do this:"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "?myString.isupper"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "Object `myString.isupper` not found.\n"
+       ]
+      }
+     ],
+     "prompt_number": 2
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Another useful variable is the *list*:"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "myList = [1, 2, \"dog\"]\n",
+      "print \"My list has\",len(myList), \"elements\"\n",
+      "print \"The first element of my list is\",myList[0]"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "My list has 3 elements\n",
+        "The first element of my list is 1\n"
+       ]
+      }
+     ],
+     "prompt_number": 34
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Lists store ordered information of any type; note that we're mixing numbers and a string. Python starts list numbering at 0, and this will most likely trip you up at some point. You can always find out how long a list is using the *len* function.\n",
+      "\n",
+      "A function is a basically a named piece of code that does something (in this case returns the length of an object). Functions can take *arguments* on which they operate, which are passed to them within brackets, such as the list in our example. Print is also a function, and a print statement can be re-written as:"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print(\"Hello, World\")"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "Hello, World\n"
+       ]
+      }
+     ],
+     "prompt_number": 41
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can access elements in lists and strings powerful ways by *slicing*. They syntax is basically ```a[start:end]```, where ```start``` and ```end``` are optional."
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "myString = \"abcdefgh\"\n",
+      "print myString[0:5]\n",
+      "print myString[:5]\n",
+      "print myString[-1]\n",
+      "print myString[:-1]\n",
+      "print myString[:-2]\n",
+      "print [0,1,2,3,4][:-1]"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "abcde\n",
+        "abcde\n",
+        "h\n",
+        "abcdefg\n",
+        "abcdef\n",
+        "[0, 1, 2, 3]\n"
+       ]
+      }
+     ],
+     "prompt_number": 48
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "We can also extend this notation to include steps ```a[start:end:step]```, so "
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "print myString[0::2]"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "aceg\n"
+       ]
+      }
+     ],
+     "prompt_number": 52
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Returns the length of the entire string, skipping every other letter."
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "## Exercise 1\n",
+      "\n",
+      "1. Take myString, and convert it into a list of words: ['A', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'] \n",
+      "- Using only built in methods of strings and lists the order of myString to say \"dog lazy the over jumps fox brown quick A\"\n",
+      "- Re-write the original string with all the words sorted in reverse alphabetical order.\n",
+      "- Reverse a list using slice notation"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "myString = \"A quick brown fox jumps over the lazy dog\"\n",
+      "mylist=myString.split()\n",
+      "print mylist"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "['A', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']\n"
+       ]
+      }
+     ],
+     "prompt_number": 10
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "mylist2=mylist[::-1]\n",
+      "myString2=\" \".join(mylist2)\n",
+      "print myString2"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "dog lazy the over jumps fox brown quick A\n"
+       ]
+      }
+     ],
+     "prompt_number": 12
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "myString3=mylist[6]+\" \"+mylist[1]+\" \"+mylist[5]+\" \"+mylist[4]+\" \"+mylist[3]+\" \"+mylist[8]+\" \"+mylist[2]+\" \"+mylist[0]\n",
+      "print myString3"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "the quick over jumps fox dog brown A\n"
+       ]
+      }
+     ],
+     "prompt_number": 18
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "mylist3=mylist2[::-1]\n",
+      "print mylist3"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "output_type": "stream",
+       "stream": "stdout",
+       "text": [
+        "['A', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']\n"
+       ]
+      }
+     ],
+     "prompt_number": 19
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
